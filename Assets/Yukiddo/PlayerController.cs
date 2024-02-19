@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     Rigidbody rb;
-    float speed = 3.0f;
+    float speed = 100.0f;
     float jumpForce = 100.0f;
     bool jumping = false;
 
@@ -30,8 +30,8 @@ public class PlayerController : MonoBehaviour
         {
             if(jumping == false)
             {
-                //Vector3 forceJ = new Vector3(0.0f,jumpForce,0.0f);
-                rb.AddForce(0.0f,jumpForce,0.0f);
+                Vector3 forceJ = new Vector3(0.0f,jumpForce,0.0f);
+                rb.AddForce(forceJ,ForceMode.Force);
             }
             Debug.Log("space");
             jumping = true;
