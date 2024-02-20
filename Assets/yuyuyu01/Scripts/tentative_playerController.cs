@@ -20,7 +20,7 @@ public class tentative_playerController : MonoBehaviour
 
     }
 
-    void OnCollisionEnter(Collider collision)
+    void OnCollisionEnter(Collision collision)
     {
         this.aud.PlayOneShot(this.A_SE);
         Debug.Log("オブジェクトに当たった");
