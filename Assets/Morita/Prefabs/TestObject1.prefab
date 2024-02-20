@@ -13,10 +13,10 @@ GameObject:
   - component: {fileID: 8969616045064064339}
   - component: {fileID: 7670565151010327227}
   - component: {fileID: 7165782408597514890}
-  - component: {fileID: 3235504574093583138}
-  m_Layer: 0
+  - component: {fileID: 7765758296254096260}
+  m_Layer: 6
   m_Name: TestObject1
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -94,7 +94,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8766986821656316650}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -114,8 +114,8 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &3235504574093583138
+  m_CollisionDetection: 1
+--- !u!114 &7765758296254096260
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -124,8 +124,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 8766986821656316650}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3eb7a849696f53449e503e3180354ae, type: 3}
+  m_Script: {fileID: 11500000, guid: c0ab8da5e8114cd478502c369c8c6dcf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: {x: -2, y: 5, z: -13}
-  speed: -45
