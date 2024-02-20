@@ -2,8 +2,9 @@ using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class TestPlayerController : MonoBehaviour
+public class PCon : MonoBehaviour
 {
     [SerializeField] float speed = 0.4f;
     [SerializeField] float rightSpeed = 0.13f;
@@ -11,6 +12,7 @@ public class TestPlayerController : MonoBehaviour
     [SerializeField] float jumpPower = 6.5f;
     [SerializeField] float moveStopTime = 1;
     private bool isJumping;
+    [SerializeField] string goalSceneName;
     Rigidbody rb;
 
     private int hitCount = 0;
@@ -21,7 +23,6 @@ public class TestPlayerController : MonoBehaviour
     {
         {"right", false },
         {"left", false },
-        {"jamp", false },
     };
 
     private void Start()
@@ -63,6 +64,14 @@ public class TestPlayerController : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.CompareTag("Goal"))
+        {
+            Goal();
+        }
+    }
+
     private void Jump()
     {
         isJumping = false;
@@ -84,4 +93,8 @@ public class TestPlayerController : MonoBehaviour
         speed = 0.4f;
     }
 
+    private void Goal()
+    {
+        SceneManager.LoadScene(goalSceneName);
+    }
 }

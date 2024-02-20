@@ -23,17 +23,20 @@ public class Generator : MonoBehaviour
     Rigidbody rb;
 
     private int obj;
-    private float tmpInterval;
     private bool createObj = true;
     IEnumerator enumerator = null;
+
+    [SerializeField] bool testGeneretor;
     
 
     private void Start()
     {
-        enumerator = GenerateObject();
-        StartCoroutine(enumerator);
+        if (testGeneretor)
+        {
+            enumerator = GenerateObject();
+            StartCoroutine(enumerator);
+        }
 
-        tmpInterval = interval;
     }
 
     IEnumerator GenerateObject()
