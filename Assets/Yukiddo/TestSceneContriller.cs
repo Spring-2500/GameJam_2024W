@@ -22,7 +22,7 @@ public class TestSceneContriller : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "End")
+        if (collision.gameObject.tag == "Player")
         {
             title();
         }
