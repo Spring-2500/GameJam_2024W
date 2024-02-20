@@ -13,11 +13,6 @@ public class tentative_objectManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(0, 0, -0.01f);
-    }
-
-    void OnCollisionStay(Collision collision)
-    {
-        Debug.Log("“–‚½‚Á‚½");
+        transform.Translate(0, 0, -0.05f);
     }
 }
