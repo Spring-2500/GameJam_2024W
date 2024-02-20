@@ -1,0 +1,9 @@
+diff a/ProjectSettings/TagManager.asset b/ProjectSettings/TagManager.asset	(rejected hunks)
+@@ -5,6 +5,7 @@
+   serializedVersion: 2
+   tags:
+   - ground
++  - A
+   layers:
+   - Default
+   - TransparentFX
