@@ -20,16 +20,9 @@ public class tentative_playerController : MonoBehaviour
 
     }
 
-    void OnTriggerEnter(Collider other)
+    void OnCollisionEnter(Collider collision)
     {
         this.aud.PlayOneShot(this.A_SE);
-        if (other.gameObject.tag == "A")
-        {
-            Debug.Log("Aに当たった");
-        }
-        else
-        {
-            Debug.Log("当たった");
-        }
+        Debug.Log("オブジェクトに当たった");
     }
 }
