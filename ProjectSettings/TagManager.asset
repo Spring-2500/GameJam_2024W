@@ -5,8 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - ground
+Morita04
   - Ground
   - Obstacle
+
+  
+main
   layers:
   - Default
   - TransparentFX
