@@ -13,10 +13,10 @@ GameObject:
   - component: {fileID: 7558957754055987426}
   - component: {fileID: 3020305749621807077}
   - component: {fileID: -2544938627095058141}
-  - component: {fileID: -3086830031045837267}
-  m_Layer: 0
+  - component: {fileID: 1592235997172674816}
+  m_Layer: 6
   m_Name: TestObject3
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -114,8 +114,8 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &-3086830031045837267
+  m_CollisionDetection: 1
+--- !u!114 &1592235997172674816
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -124,8 +124,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 4684121252504223820}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3eb7a849696f53449e503e3180354ae, type: 3}
+  m_Script: {fileID: 11500000, guid: c0ab8da5e8114cd478502c369c8c6dcf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: -30
-  random: 0
