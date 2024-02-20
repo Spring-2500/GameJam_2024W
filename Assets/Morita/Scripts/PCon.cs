@@ -35,7 +35,7 @@ public class PCon : MonoBehaviour
         move["right"] = Input.GetKey(KeyCode.D);
         move["left"] = Input.GetKey(KeyCode.A);
 
-        if (Input.GetKeyDown(KeyCode.Space)) Jump();
+        if (Input.GetKeyDown(KeyCode.Space) && isJumping) Jump();
     }
 
     private void FixedUpdate()
