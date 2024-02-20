@@ -19,6 +19,10 @@ public class main_PCon : MonoBehaviour
 
     public Generator[] generete;
 
+    //追加（ゆゆゆ）
+    public AudioClip A_SE;
+    AudioSource aud;
+
     Dictionary<string, bool> move = new Dictionary<string, bool>
     {
         {"right", false },
@@ -29,6 +33,10 @@ public class main_PCon : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         isJumping = true;
+
+        //追加（ゆゆゆ）
+        this.aud = GetComponent<AudioSource>();
+
     }
     private void Update()
     {
@@ -85,6 +93,9 @@ public class main_PCon : MonoBehaviour
         speed = 0.0f;
 
         Debug.Log("止まった");
+
+        //追加（ゆゆゆ）
+        this.aud.PlayOneShot(this.A_SE);
 
         yield return new WaitForSeconds(moveStopTime);
 
