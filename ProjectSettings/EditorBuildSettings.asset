@@ -4,5 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Yukiddo/Test/StartScene.unity
+    guid: 52afa83affc9a074fb71fb176a122377
+  - enabled: 1
+    path: Assets/Yukiddo/Test/Test.unity
+    guid: 0a935290121660e4e9df383825cbc0cd
+  - enabled: 1
+    path: Assets/Yukiddo/Test/EndScene.unity
+    guid: 845940cc4a586e8498ec2bb79c3aa543
   m_configObjects: {}
