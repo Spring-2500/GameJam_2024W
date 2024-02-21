@@ -66,7 +66,7 @@ public class PCon : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag("Goal"))
+        if(other.CompareTag("Goal"))
         {
             Goal();
         }
@@ -95,6 +95,7 @@ public class PCon : MonoBehaviour
 
     private void Goal()
     {
+        Debug.Log("Goal");
         SceneManager.LoadScene(goalSceneName);
     }
 }

@@ -5,18 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - ground
- yuyuyu07
-
-yuyuyu06
-
-Morita04
   - Ground
   - Obstacle
-
-  
-main
- main
- main
+  - Goal
   layers:
   - Default
   - TransparentFX
@@ -24,7 +15,7 @@ main
   - 
   - Water
   - UI
-  - Obstacle
+  - 
   - 
   - 
   - 

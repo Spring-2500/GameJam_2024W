@@ -133,8 +133,9 @@ GameObject:
   m_Component:
   - component: {fileID: 159071351}
   - component: {fileID: 159071352}
+  - component: {fileID: 159071353}
   m_Layer: 0
-  m_Name: Generator (10)
+  m_Name: Generator_Bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -169,17 +170,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objects:
   - {fileID: 4684121252504223820, guid: 34e936d5b0b50b24cb1ccf2a3a31ae04, type: 3}
-  interval: 3.5
-  xAngle: 0
+  interval: 3
   yAngle: 0
   zAngle: 0
   speed: -35
-  randomAngle: 1
+  randomAngle: 0
   randomSpeed: 0
+  minyAngle: 0
+  maxyAngle: 0
+  minSpeed: 0
+  maxSpeed: 0
   xRotation: 0
   yRotation: 0
   zRotation: 0
-  testGeneretor: 0
+  testGeneretor: 1
+--- !u!65 &159071353
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159071350}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &178857088
 GameObject:
   m_ObjectHideFlags: 0
@@ -190,8 +207,9 @@ GameObject:
   m_Component:
   - component: {fileID: 178857089}
   - component: {fileID: 178857090}
+  - component: {fileID: 178857091}
   m_Layer: 0
-  m_Name: Generator (5)
+  m_Name: Generator_Rolling
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -226,17 +244,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objects:
   - {fileID: 2788452724841496174, guid: d999bd44b2fe27f4e88d89bd40c342a6, type: 3}
-  interval: 5
-  xAngle: 0
+  interval: 4.5
   yAngle: 0
   zAngle: 90
   speed: -30
   randomAngle: 0
   randomSpeed: 0
+  minyAngle: 0
+  maxyAngle: 0
+  minSpeed: 0
+  maxSpeed: 0
   xRotation: 10
   yRotation: 0
   zRotation: 0
-  testGeneretor: 0
+  testGeneretor: 1
+--- !u!65 &178857091
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 178857088}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &181535186
 GameObject:
   m_ObjectHideFlags: 0
@@ -247,8 +281,9 @@ GameObject:
   m_Component:
   - component: {fileID: 181535187}
   - component: {fileID: 181535188}
+  - component: {fileID: 181535189}
   m_Layer: 0
-  m_Name: Generator (2)
+  m_Name: Generator_MiddleRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -283,18 +318,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objects:
   - {fileID: 4684121252504223820, guid: 34e936d5b0b50b24cb1ccf2a3a31ae04, type: 3}
-  - {fileID: 8766986821656316650, guid: 8abc9d415278e1a41adda9dad27868f8, type: 3}
-  interval: 4
-  xAngle: 0
+  interval: 3.5
   yAngle: 0
   zAngle: 0
   speed: -22
   randomAngle: 1
-  randomSpeed: 0
+  randomSpeed: 1
+  minyAngle: -4
+  maxyAngle: 16
+  minSpeed: -20
+  maxSpeed: -24
   xRotation: 0
   yRotation: 0
   zRotation: 10
-  testGeneretor: 0
+  testGeneretor: 1
+--- !u!65 &181535189
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 181535186}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &366288986
 GameObject:
   m_ObjectHideFlags: 0
@@ -305,8 +355,9 @@ GameObject:
   m_Component:
   - component: {fileID: 366288987}
   - component: {fileID: 366288988}
+  - component: {fileID: 366288989}
   m_Layer: 0
-  m_Name: Generator (4)
+  m_Name: Generator_ButtomRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -341,17 +392,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objects:
   - {fileID: 4684121252504223820, guid: bcfbf2ecb47ed7240b2ec3fc0653b686, type: 3}
-  interval: 2.5
-  xAngle: 0
+  interval: 2
   yAngle: 0
   zAngle: 0
   speed: -20
   randomAngle: 1
   randomSpeed: 0
+  minyAngle: -4
+  maxyAngle: 16
+  minSpeed: 0
+  maxSpeed: 0
   xRotation: 0
   yRotation: 0
   zRotation: 0
-  testGeneretor: 0
+  testGeneretor: 1
+--- !u!65 &366288989
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 366288986}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &615251518
 GameObject:
   m_ObjectHideFlags: 0
@@ -446,8 +513,9 @@ GameObject:
   m_Component:
   - component: {fileID: 737972639}
   - component: {fileID: 737972640}
+  - component: {fileID: 737972641}
   m_Layer: 0
-  m_Name: Generator (1)
+  m_Name: Generator_MiddleLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -482,17 +550,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objects:
   - {fileID: 8766986821656316650, guid: 8abc9d415278e1a41adda9dad27868f8, type: 3}
-  interval: 3
-  xAngle: 0
+  interval: 2.5
   yAngle: 0
   zAngle: 0
   speed: -22
   randomAngle: 1
-  randomSpeed: 0
+  randomSpeed: 1
+  minyAngle: -16
+  maxyAngle: 4
+  minSpeed: -20
+  maxSpeed: -24
   xRotation: 0
   yRotation: 10
   zRotation: 0
-  testGeneretor: 0
+  testGeneretor: 1
+--- !u!65 &737972641
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 737972638}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &767387223
 GameObject:
   m_ObjectHideFlags: 0
@@ -597,6 +681,7 @@ GameObject:
   m_Component:
   - component: {fileID: 776507693}
   - component: {fileID: 776507694}
+  - component: {fileID: 776507695}
   m_Layer: 0
   m_Name: Generator (6)
   m_TagString: Untagged
@@ -635,16 +720,32 @@ MonoBehaviour:
   - {fileID: 4684121252504223820, guid: 34e936d5b0b50b24cb1ccf2a3a31ae04, type: 3}
   - {fileID: 8766986821656316650, guid: 8abc9d415278e1a41adda9dad27868f8, type: 3}
   interval: 1
-  xAngle: 0
   yAngle: 0
   zAngle: 0
   speed: -13
   randomAngle: 0
   randomSpeed: 0
+  minyAngle: 0
+  maxyAngle: 0
+  minSpeed: 0
+  maxSpeed: 0
   xRotation: 10
   yRotation: 0
   zRotation: 0
   testGeneretor: 0
+--- !u!65 &776507695
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 776507692}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &988257582
 GameObject:
   m_ObjectHideFlags: 0
@@ -655,8 +756,9 @@ GameObject:
   m_Component:
   - component: {fileID: 988257583}
   - component: {fileID: 988257584}
+  - component: {fileID: 988257585}
   m_Layer: 0
-  m_Name: Generator (3)
+  m_Name: Generator_BttomLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -691,17 +793,78 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objects:
   - {fileID: 4684121252504223820, guid: bcfbf2ecb47ed7240b2ec3fc0653b686, type: 3}
-  interval: 3
-  xAngle: 0
+  interval: 2.5
   yAngle: 0
   zAngle: 0
   speed: -20
   randomAngle: 1
   randomSpeed: 0
+  minyAngle: -16
+  maxyAngle: 4
+  minSpeed: 0
+  maxSpeed: 0
   xRotation: 0
   yRotation: 0
   zRotation: 0
-  testGeneretor: 0
+  testGeneretor: 1
+--- !u!65 &988257585
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 988257582}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1035225123
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1035225125}
+  - component: {fileID: 1035225124}
+  m_Layer: 0
+  m_Name: Goal
+  m_TagString: Goal
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1035225124
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1035225123}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &1035225125
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1035225123}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 4, z: 200}
+  m_LocalScale: {x: 20, y: 20, z: 10}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1590713636
 GameObject:
   m_ObjectHideFlags: 0
@@ -712,6 +875,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1590713637}
   - component: {fileID: 1590713638}
+  - component: {fileID: 1590713639}
   m_Layer: 0
   m_Name: Generator (7)
   m_TagString: Untagged
@@ -749,16 +913,32 @@ MonoBehaviour:
   objects:
   - {fileID: 8766986821656316650, guid: 8abc9d415278e1a41adda9dad27868f8, type: 3}
   interval: 2
-  xAngle: 0
   yAngle: 0
   zAngle: 0
   speed: -13
   randomAngle: 0
   randomSpeed: 0
+  minyAngle: 0
+  maxyAngle: 0
+  minSpeed: 0
+  maxSpeed: 0
   xRotation: 0
   yRotation: 10
   zRotation: 0
   testGeneretor: 0
+--- !u!65 &1590713639
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1590713636}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1901224397
 GameObject:
   m_ObjectHideFlags: 0
@@ -769,6 +949,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1901224398}
   - component: {fileID: 1901224399}
+  - component: {fileID: 1901224400}
   m_Layer: 0
   m_Name: Generator (8)
   m_TagString: Untagged
@@ -807,16 +988,32 @@ MonoBehaviour:
   - {fileID: 4684121252504223820, guid: 34e936d5b0b50b24cb1ccf2a3a31ae04, type: 3}
   - {fileID: 8766986821656316650, guid: 8abc9d415278e1a41adda9dad27868f8, type: 3}
   interval: 1.5
-  xAngle: 0
   yAngle: 0
   zAngle: 0
   speed: -13
   randomAngle: 0
   randomSpeed: 0
+  minyAngle: 0
+  maxyAngle: 0
+  minSpeed: 0
+  maxSpeed: 0
   xRotation: 0
   yRotation: 0
   zRotation: 10
   testGeneretor: 0
+--- !u!65 &1901224400
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1901224397}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1996147738
 GameObject:
   m_ObjectHideFlags: 0
@@ -924,8 +1121,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2064341249}
   - component: {fileID: 2064341248}
+  - component: {fileID: 2064341250}
   m_Layer: 0
-  m_Name: Generator0
+  m_Name: Genetator_Middle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -945,18 +1143,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objects:
   - {fileID: 4684121252504223820, guid: 34e936d5b0b50b24cb1ccf2a3a31ae04, type: 3}
-  - {fileID: 8766986821656316650, guid: 8abc9d415278e1a41adda9dad27868f8, type: 3}
-  interval: 2
-  xAngle: 0
+  interval: 1.5
   yAngle: 0
   zAngle: 0
   speed: -22
   randomAngle: 0
   randomSpeed: 0
+  minyAngle: 0
+  maxyAngle: 0
+  minSpeed: 0
+  maxSpeed: 0
   xRotation: 10
   yRotation: 0
   zRotation: 0
-  testGeneretor: 0
+  testGeneretor: 1
 --- !u!4 &2064341249
 Transform:
   m_ObjectHideFlags: 0
@@ -972,6 +1172,19 @@ Transform:
   m_Father: {fileID: 2089365183}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2064341250
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2064341247}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2089365177
 GameObject:
   m_ObjectHideFlags: 0
@@ -1136,7 +1349,7 @@ GameObject:
   - component: {fileID: 2105443443}
   - component: {fileID: 2105443444}
   m_Layer: 0
-  m_Name: Generator (9)
+  m_Name: DistanceGenerator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
