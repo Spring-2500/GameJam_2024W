@@ -17,6 +17,7 @@ public class Generator : MonoBehaviour
     [SerializeField] float maxyAngle;
     [SerializeField] int minSpeed;
     [SerializeField] int maxSpeed;
+    [SerializeField] float startTime = 3.0f; //スクリプトエラーが怖いのでインスペクター編集に変更しました
 
     [Header("オブジェクトの回転")]
     [SerializeField] float xRotation;
@@ -43,7 +44,7 @@ public class Generator : MonoBehaviour
 
     IEnumerator GenerateObject()
     {
-        yield return new WaitForSeconds(3.0f); // この秒数はPConのstartTimeに合わせる。多分3.0秒後にゲームスタートでいいはず
+        yield return new WaitForSeconds(startTime); // この秒数はPConのstartTimeに合わせる。多分3.0秒後にゲームスタートでいいはず
                                                //カウントダウンタイマーは後で作成
 
         while (true)
