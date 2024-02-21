@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class tentative_playerController : MonoBehaviour
+public class main_SE : MonoBehaviour
 {
     public AudioClip A_SE;
     AudioSource aud;
@@ -10,6 +10,7 @@ public class tentative_playerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Application.targetFrameRate = 60;
         this.aud = GetComponent<AudioSource>();
     }
 
@@ -21,10 +22,7 @@ public class tentative_playerController : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.name == "tentative_object")
-        {
-            this.aud.PlayOneShot(this.A_SE);
-            Debug.Log("オブジェクトに当たった");
-        }
+        this.aud.PlayOneShot(this.A_SE);
+        Debug.Log("オブジェクトに当たった");
     }
 }

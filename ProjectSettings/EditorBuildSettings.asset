@@ -14,4 +14,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Yukiddo/Test/EndScene.unity
     guid: 845940cc4a586e8498ec2bb79c3aa543
+  - enabled: 1
+    path: Assets/main/Scene/main_StartScene.unity
+    guid: 08be49fdad82a3a4cb5194e76a327f29
+  - enabled: 1
+    path: Assets/main/Scene/main_Morita01.unity
+    guid: 1c6e9cb5683d4c24cb4635c59d3742b4
+  - enabled: 1
+    path: Assets/main/Scene/main_EndScene.unity
+    guid: 3fa32527f154c8d45a40b30283ec8302
   m_configObjects: {}
