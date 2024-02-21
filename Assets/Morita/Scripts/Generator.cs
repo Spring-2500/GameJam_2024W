@@ -45,6 +45,9 @@ public class Generator : MonoBehaviour
 
     IEnumerator GenerateObject()
     {
+        yield return new WaitForSeconds(3.0f); // この秒数はPConのstartTimeに合わせる。多分3.0秒後にゲームスタートでいいはず
+                                               //カウントダウンタイマーは後で作成
+
         while (true)
         {
             if (createObj)
@@ -100,4 +103,5 @@ public class Generator : MonoBehaviour
             StopCoroutine(enumerator);
         }
     }
+
 }
