@@ -560,8 +560,8 @@ MonoBehaviour:
   maxyAngle: 4
   minSpeed: -20
   maxSpeed: -24
-  xRotation: 0
-  yRotation: 10
+  xRotation: 10
+  yRotation: 0
   zRotation: 0
   testGeneretor: 1
 --- !u!65 &737972641
@@ -1153,8 +1153,8 @@ MonoBehaviour:
   maxyAngle: 0
   minSpeed: 0
   maxSpeed: 0
-  xRotation: 10
-  yRotation: 0
+  xRotation: 0
+  yRotation: 10
   zRotation: 0
   testGeneretor: 1
 --- !u!4 &2064341249
