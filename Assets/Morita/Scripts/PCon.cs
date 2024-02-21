@@ -13,6 +13,7 @@ public class PCon : MonoBehaviour
     [SerializeField] float moveStopTime = 1; //オブジェクトに衝突したときプレイヤーが止まる秒数
     [SerializeField] float startTime = 3.0f; //スタート時のカウントダウン
     private bool isJumping; //無限ジャンプ防止の変数
+    [SerializeField] GameObject speedEffect; //SpeedEffectを入れる
     [SerializeField] string goalSceneName; //ゴールシーンの名前、使わなくてもよい
     Rigidbody rb; //Rigidbodyを格納する変数
 
@@ -32,6 +33,8 @@ public class PCon : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>(); //Rigidbodyを取得
         isJumping = true; //最初はジャンプできるようにする
+
+        speedEffect.SetActive(false); //SpeedEffectは最初表示しない
 
         //CountDownが開始する
         StartCoroutine(CountDown());
@@ -104,6 +107,8 @@ public class PCon : MonoBehaviour
 
         speed = 0.0f;
 
+        speedEffect.SetActive(false);
+
         Debug.Log("止まった");
 
         yield return new WaitForSeconds(moveStopTime);
@@ -111,6 +116,8 @@ public class PCon : MonoBehaviour
         for (int i = 0; i < generete.Length; i++) generete[i].GenerateStart();
 
         speed = 0.4f;
+
+        speedEffect.SetActive(true);
     }
 
     //ゴールシーンに遷移
@@ -128,6 +135,8 @@ public class PCon : MonoBehaviour
         yield return new WaitForSeconds(startTime);
 
         moveStart = true;
+
+        speedEffect.SetActive(true); //カウントダウン終了後SpeedEffectを表示
     }
 
 }
