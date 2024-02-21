@@ -19,6 +19,12 @@ public class Generator : MonoBehaviour
     [SerializeField] int maxSpeed;
     [SerializeField] float startTime = 3.0f; //スクリプトエラーが怖いのでインスペクター編集に変更しました
 
+    [Header("オブジェクトが壁の外に出現したときの処理")]
+    [SerializeField] float wallPosLeft;
+    [SerializeField] float wallPosRight;
+    [SerializeField] float outsideMinYAngle;
+    [SerializeField] float outsideMaxYAngle;
+
     [Header("オブジェクトの回転")]
     [SerializeField] float xRotation;
     [SerializeField] float yRotation;
@@ -26,6 +32,7 @@ public class Generator : MonoBehaviour
 
     private int obj;
     private bool createObj = true;
+    private bool stopGenerete = false;
     IEnumerator enumerator = null;
 
     [Header("オブジェクト生成をしない（テスト用）")]
@@ -49,7 +56,12 @@ public class Generator : MonoBehaviour
 
         while (true)
         {
-            if (createObj)
+            if (stopGenerete)
+            {
+                yield break;
+
+            }
+            else if (createObj)
             {
                 yield return new WaitForSeconds(interval);
 
@@ -57,17 +69,26 @@ public class Generator : MonoBehaviour
 
                 if (randomAngle) yAngle = Random.Range(minyAngle, maxyAngle);
 
+
                 Quaternion angle = Quaternion.Euler(0, yAngle, zAngle);
 
                 GameObject o = Instantiate(objects[obj], transform.position, angle);
 
-                Force(o);
+                if (transform.position.x < wallPosLeft || transform.position.x > wallPosRight)
+                {
+                    OutsideWall(o);
+                }
+                else
+                {
+                    Force(o);
+                }
             }
 
             else
             {
                 yield return null;
             }
+
         }
     }
 
@@ -97,10 +118,14 @@ public class Generator : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("Goal"))
+        if(other.CompareTag("PreGoal"))
         {
-            StopCoroutine(enumerator);
+            stopGenerete = true;
         }
     }
 
+    private void OutsideWall(GameObject o)
+    {
+        Destroy(o);
+    }
 }
