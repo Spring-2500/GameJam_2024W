@@ -7,12 +7,9 @@ TagManager:
   - ground
   - Ground
   - Obstacle
-Morita07
-
-  - tentative_goal
-  - tentative_object
-main
   - Goal
+  - Enemy
+  - PreGoal
   layers:
   - Default
   - TransparentFX

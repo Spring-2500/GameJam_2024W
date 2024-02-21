@@ -19,6 +19,10 @@ public class Generator : MonoBehaviour
     [SerializeField] int maxSpeed;
     [SerializeField] float startTime = 3.0f; //スクリプトエラーが怖いのでインスペクター編集に変更しました
 
+    [Header("オブジェクトが壁の外に出現したときの処理")]
+    [SerializeField] float wallPosLeft; //左の壁のx座標 + 1.0ぐらいをを入力
+    [SerializeField] float wallPosRight; //右の壁のx座標 + 1,0ぐらいを入力
+
     [Header("オブジェクトの回転")]
     [SerializeField] float xRotation;
     [SerializeField] float yRotation;
@@ -26,6 +30,7 @@ public class Generator : MonoBehaviour
 
     private int obj;
     private bool createObj = true;
+    private bool stopGenerete = false;
     IEnumerator enumerator = null;
 
     [Header("オブジェクト生成をしない（テスト用）")]
@@ -49,7 +54,13 @@ public class Generator : MonoBehaviour
 
         while (true)
         {
-            if (createObj)
+            if (stopGenerete)
+            {
+                //ゴール前のオブジェクトの生成をやめる
+                yield break;
+
+            }
+            else if (createObj)
             {
                 yield return new WaitForSeconds(interval);
 
@@ -57,17 +68,28 @@ public class Generator : MonoBehaviour
 
                 if (randomAngle) yAngle = Random.Range(minyAngle, maxyAngle);
 
+
                 Quaternion angle = Quaternion.Euler(0, yAngle, zAngle);
 
                 GameObject o = Instantiate(objects[obj], transform.position, angle);
 
-                Force(o);
+                if (transform.position.x < wallPosLeft || transform.position.x > wallPosRight)
+                {
+                    //壁の外に生成されたオブジェクトをある程度削除する
+                    OutsideWall(o);
+                }
+                else
+                {
+                    //オブジェクトを飛ばす
+                    Force(o);
+                }
             }
 
             else
             {
                 yield return null;
             }
+
         }
     }
 
@@ -97,10 +119,15 @@ public class Generator : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("Goal"))
+        //ゴール前のオブジェクトの生成をやめる
+        if(other.CompareTag("PreGoal"))
         {
-            StopCoroutine(enumerator);
+            stopGenerete = true;
         }
     }
 
+    private void OutsideWall(GameObject o)
+    {
+        Destroy(o);
+    }
 }
