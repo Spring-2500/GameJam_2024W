@@ -18,6 +18,6 @@ public class main_EndSceneController : MonoBehaviour
     }
     public void title()
     {
-        SceneManager.LoadScene("StartScene");
+        SceneManager.LoadScene("main_StartScene");
     }
 }
