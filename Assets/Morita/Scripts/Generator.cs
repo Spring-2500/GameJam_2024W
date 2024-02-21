@@ -20,10 +20,8 @@ public class Generator : MonoBehaviour
     [SerializeField] float startTime = 3.0f; //スクリプトエラーが怖いのでインスペクター編集に変更しました
 
     [Header("オブジェクトが壁の外に出現したときの処理")]
-    [SerializeField] float wallPosLeft;
-    [SerializeField] float wallPosRight;
-    [SerializeField] float outsideMinYAngle;
-    [SerializeField] float outsideMaxYAngle;
+    [SerializeField] float wallPosLeft; //左の壁のx座標 + 1.0ぐらいをを入力
+    [SerializeField] float wallPosRight; //右の壁のx座標 + 1,0ぐらいを入力
 
     [Header("オブジェクトの回転")]
     [SerializeField] float xRotation;
@@ -58,6 +56,7 @@ public class Generator : MonoBehaviour
         {
             if (stopGenerete)
             {
+                //ゴール前のオブジェクトの生成をやめる
                 yield break;
 
             }
@@ -76,10 +75,12 @@ public class Generator : MonoBehaviour
 
                 if (transform.position.x < wallPosLeft || transform.position.x > wallPosRight)
                 {
+                    //壁の外に生成されたオブジェクトをある程度削除する
                     OutsideWall(o);
                 }
                 else
                 {
+                    //オブジェクトを飛ばす
                     Force(o);
                 }
             }
@@ -118,6 +119,7 @@ public class Generator : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        //ゴール前のオブジェクトの生成をやめる
         if(other.CompareTag("PreGoal"))
         {
             stopGenerete = true;
