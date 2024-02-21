@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 159071352}
   - component: {fileID: 159071353}
   m_Layer: 0
-  m_Name: Generator_Bottom
+  m_Name: Generator_BottomMiddle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -183,7 +183,7 @@ MonoBehaviour:
   xRotation: 0
   yRotation: 0
   zRotation: 0
-  testGeneretor: 1
+  testGeneretor: 0
 --- !u!65 &159071353
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -208,6 +208,7 @@ GameObject:
   - component: {fileID: 178857089}
   - component: {fileID: 178857090}
   - component: {fileID: 178857091}
+  - component: {fileID: 178857092}
   m_Layer: 0
   m_Name: Generator_Rolling
   m_TagString: Untagged
@@ -228,7 +229,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2089365183}
-  m_RootOrder: 7
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &178857090
 MonoBehaviour:
@@ -237,7 +238,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 178857088}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 18a6eaee607051b4da86c47cb40fb588, type: 3}
   m_Name: 
@@ -257,7 +258,7 @@ MonoBehaviour:
   xRotation: 10
   yRotation: 0
   zRotation: 0
-  testGeneretor: 1
+  testGeneretor: 0
 --- !u!65 &178857091
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -271,6 +272,27 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &178857092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 178857088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 903908f5eb0c8924f9553e7dec64582f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 2788452724841496174, guid: d999bd44b2fe27f4e88d89bd40c342a6, type: 3}
+  interval: 4
+  zAngle: 90
+  xRotation: 0
+  yRotation: 0
+  zRotation: 0
+  playerStartPosX: 0
+  testGeneretor: 0
 --- !u!1 &181535186
 GameObject:
   m_ObjectHideFlags: 0
@@ -331,7 +353,7 @@ MonoBehaviour:
   xRotation: 0
   yRotation: 0
   zRotation: 10
-  testGeneretor: 1
+  testGeneretor: 0
 --- !u!65 &181535189
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -383,7 +405,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 200064579}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.5, y: 25, z: -30}
+  m_LocalPosition: {x: 17.5, y: 25, z: -30}
   m_LocalScale: {x: 5, y: 50, z: 1000}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -450,7 +472,7 @@ MonoBehaviour:
   xRotation: 0
   yRotation: 0
   zRotation: 0
-  testGeneretor: 1
+  testGeneretor: 0
 --- !u!65 &366288989
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -502,7 +524,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 548930471}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.5, y: 25, z: -30}
+  m_LocalPosition: {x: -17.5, y: 25, z: -30}
   m_LocalScale: {x: 5, y: 50, z: 1000}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -653,7 +675,7 @@ MonoBehaviour:
   xRotation: 10
   yRotation: 0
   zRotation: 0
-  testGeneretor: 1
+  testGeneretor: 0
 --- !u!65 &737972641
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -773,12 +795,12 @@ GameObject:
   - component: {fileID: 776507694}
   - component: {fileID: 776507695}
   m_Layer: 0
-  m_Name: Generator (6)
+  m_Name: Generator_TopMiddle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &776507693
 Transform:
   m_ObjectHideFlags: 0
@@ -792,7 +814,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2089365183}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &776507694
 MonoBehaviour:
@@ -813,12 +835,12 @@ MonoBehaviour:
   yAngle: 0
   zAngle: 0
   speed: -13
-  randomAngle: 0
-  randomSpeed: 0
+  randomAngle: 1
+  randomSpeed: 1
   minyAngle: 0
   maxyAngle: 0
-  minSpeed: 0
-  maxSpeed: 0
+  minSpeed: -9
+  maxSpeed: -14
   xRotation: 10
   yRotation: 0
   zRotation: 0
@@ -896,7 +918,7 @@ MonoBehaviour:
   xRotation: 0
   yRotation: 0
   zRotation: 0
-  testGeneretor: 1
+  testGeneretor: 0
 --- !u!65 &988257585
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -948,8 +970,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1035225123}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 4, z: 200}
-  m_LocalScale: {x: 20, y: 20, z: 10}
+  m_LocalPosition: {x: 0, y: 45, z: 200}
+  m_LocalScale: {x: 40, y: 100, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -967,12 +989,12 @@ GameObject:
   - component: {fileID: 1590713638}
   - component: {fileID: 1590713639}
   m_Layer: 0
-  m_Name: Generator (7)
+  m_Name: Generator_TopLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1590713637
 Transform:
   m_ObjectHideFlags: 0
@@ -986,7 +1008,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2089365183}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1590713638
 MonoBehaviour:
@@ -1006,12 +1028,12 @@ MonoBehaviour:
   yAngle: 0
   zAngle: 0
   speed: -13
-  randomAngle: 0
-  randomSpeed: 0
-  minyAngle: 0
-  maxyAngle: 0
-  minSpeed: 0
-  maxSpeed: 0
+  randomAngle: 1
+  randomSpeed: 1
+  minyAngle: -16
+  maxyAngle: 8
+  minSpeed: -9
+  maxSpeed: -14
   xRotation: 0
   yRotation: 10
   zRotation: 0
@@ -1041,12 +1063,12 @@ GameObject:
   - component: {fileID: 1901224399}
   - component: {fileID: 1901224400}
   m_Layer: 0
-  m_Name: Generator (8)
+  m_Name: Generator_TopRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1901224398
 Transform:
   m_ObjectHideFlags: 0
@@ -1060,7 +1082,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2089365183}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1901224399
 MonoBehaviour:
@@ -1081,12 +1103,12 @@ MonoBehaviour:
   yAngle: 0
   zAngle: 0
   speed: -13
-  randomAngle: 0
-  randomSpeed: 0
-  minyAngle: 0
-  maxyAngle: 0
-  minSpeed: 0
-  maxSpeed: 0
+  randomAngle: 1
+  randomSpeed: 1
+  minyAngle: -8
+  maxyAngle: 16
+  minSpeed: -9
+  maxSpeed: -14
   xRotation: 0
   yRotation: 0
   zRotation: 10
@@ -1195,7 +1217,7 @@ Transform:
   m_GameObject: {fileID: 1996147738}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -30}
-  m_LocalScale: {x: 10, y: 1, z: 1000}
+  m_LocalScale: {x: 30, y: 1, z: 1000}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1246,7 +1268,7 @@ MonoBehaviour:
   xRotation: 0
   yRotation: 10
   zRotation: 0
-  testGeneretor: 1
+  testGeneretor: 0
 --- !u!4 &2064341249
 Transform:
   m_ObjectHideFlags: 0
@@ -1313,6 +1335,7 @@ MonoBehaviour:
   leftSpeed: -0.13
   jumpPower: 6.5
   moveStopTime: 1
+  startTime: 3
   goalSceneName: 
   generete:
   - {fileID: 2064341248}
@@ -1321,7 +1344,9 @@ MonoBehaviour:
   - {fileID: 988257584}
   - {fileID: 366288988}
   - {fileID: 159071352}
-  - {fileID: 178857090}
+  - {fileID: 776507694}
+  - {fileID: 1590713638}
+  - {fileID: 1901224399}
 --- !u!54 &2089365179
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1420,10 +1445,10 @@ Transform:
   - {fileID: 988257583}
   - {fileID: 366288987}
   - {fileID: 159071351}
-  - {fileID: 178857089}
   - {fileID: 776507693}
   - {fileID: 1590713637}
   - {fileID: 1901224398}
+  - {fileID: 178857089}
   - {fileID: 2105443443}
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -1444,7 +1469,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2105443443
 Transform:
   m_ObjectHideFlags: 0

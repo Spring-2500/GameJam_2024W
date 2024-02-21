@@ -2,26 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Generator : MonoBehaviour
+public class RollingGenerator : MonoBehaviour
 {
     [SerializeField] GameObject[] objects;
 
     [Header("オブジェクト生成に関すること")]
     [SerializeField] float interval = 1.0f;
-    [SerializeField] float yAngle;
     [SerializeField] float zAngle;
-    [SerializeField] float speed;
-    [SerializeField] bool randomAngle;
-    [SerializeField] bool randomSpeed;
-    [SerializeField] float minyAngle;
-    [SerializeField] float maxyAngle;
-    [SerializeField] int minSpeed;
-    [SerializeField] int maxSpeed;
 
     [Header("オブジェクトの回転")]
     [SerializeField] float xRotation;
     [SerializeField] float yRotation;
     [SerializeField] float zRotation;
+    [SerializeField] float playerStartPosX;
 
     private int obj;
     private bool createObj = true;
@@ -29,7 +22,7 @@ public class Generator : MonoBehaviour
 
     [Header("オブジェクト生成をしない（テスト用）")]
     [SerializeField] bool testGeneretor = false;
-    
+
 
     private void Start()
     {
@@ -52,15 +45,10 @@ public class Generator : MonoBehaviour
             {
                 yield return new WaitForSeconds(interval);
 
-                obj = Random.Range(0, objects.Length);
 
-                if (randomAngle) yAngle = Random.Range(minyAngle, maxyAngle);
+                GameObject o = Instantiate(objects[obj], new Vector3(playerStartPosX, transform.position.y, transform.position.z), Quaternion.Euler(0, 0, zAngle));
 
-                Quaternion angle = Quaternion.Euler(0, yAngle, zAngle);
-
-                GameObject o = Instantiate(objects[obj], transform.position, angle);
-
-                Force(o);
+                Rolling(o);
             }
 
             else
@@ -70,22 +58,16 @@ public class Generator : MonoBehaviour
         }
     }
 
-    private void Force(GameObject o)
+    private void Rolling(GameObject o)
     {
-
-        if(randomSpeed) speed = Random.Range(minSpeed, maxSpeed);
-
-        o.GetComponent<Rigidbody>().AddForce(o.transform.forward * speed, ForceMode.Impulse);
-
         o.GetComponent<Rigidbody>().AddTorque(new Vector3(xRotation, yRotation, zRotation));
-
     }
 
-   public void GenerateStop()
-   {
+    public void GenerateStop()
+    {
         createObj = false;
         Debug.Log("ジェネレーターが止まった");
-   }
+    }
 
     public void GenerateStart()
     {
@@ -96,7 +78,7 @@ public class Generator : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("Goal"))
+        if (other.CompareTag("Goal"))
         {
             StopCoroutine(enumerator);
         }
