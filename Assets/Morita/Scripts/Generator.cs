@@ -8,12 +8,15 @@ public class Generator : MonoBehaviour
 
     [Header("オブジェクト生成に関すること")]
     [SerializeField] float interval = 1.0f;
-    [SerializeField] float xAngle;
     [SerializeField] float yAngle;
     [SerializeField] float zAngle;
     [SerializeField] float speed;
     [SerializeField] bool randomAngle;
     [SerializeField] bool randomSpeed;
+    [SerializeField] float minyAngle;
+    [SerializeField] float maxyAngle;
+    [SerializeField] int minSpeed;
+    [SerializeField] int maxSpeed;
 
     [Header("オブジェクトの回転")]
     [SerializeField] float xRotation;
@@ -26,6 +29,7 @@ public class Generator : MonoBehaviour
     private bool createObj = true;
     IEnumerator enumerator = null;
 
+    [Header("オブジェクト生成をしない（テスト用）")]
     [SerializeField] bool testGeneretor;
     
 
@@ -49,9 +53,9 @@ public class Generator : MonoBehaviour
 
                 obj = Random.Range(0, objects.Length);
 
-                if (randomAngle) yAngle = Random.Range(-8.0f, 8.0f);
+                if (randomAngle) yAngle = Random.Range(minyAngle, maxyAngle);
 
-                Quaternion angle = Quaternion.Euler(xAngle, yAngle, zAngle);
+                Quaternion angle = Quaternion.Euler(0, yAngle, zAngle);
 
                 GameObject o = Instantiate(objects[obj], transform.position, angle);
 
@@ -68,7 +72,7 @@ public class Generator : MonoBehaviour
     private void Force(GameObject o)
     {
 
-        if(randomSpeed) speed = Random.Range(-23, -25);
+        if(randomSpeed) speed = Random.Range(minSpeed, maxSpeed);
 
         o.GetComponent<Rigidbody>().AddForce(o.transform.forward * speed, ForceMode.Impulse);
 
@@ -88,4 +92,12 @@ public class Generator : MonoBehaviour
         Debug.Log("ジェネレーターが再開した");
     }
 
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.CompareTag("Goal"))
+        {
+            StopCoroutine(enumerator);
+        }
+    }
 }
