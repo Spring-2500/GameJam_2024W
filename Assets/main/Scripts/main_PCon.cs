@@ -106,6 +106,7 @@ public class main_PCon : MonoBehaviour
 
     private void Goal()
     {
-        SceneManager.LoadScene(goalSceneName);
+        //シーン名変更（ゆゆゆ）
+        SceneManager.LoadScene("main_EndScene");
     }
 }

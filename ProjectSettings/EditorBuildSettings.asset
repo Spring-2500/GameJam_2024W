@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/main/Scene/main_Morita01.unity
     guid: 1c6e9cb5683d4c24cb4635c59d3742b4
+  - enabled: 1
+    path: Assets/main/Scene/main_EndScene.unity
+    guid: 3fa32527f154c8d45a40b30283ec8302
   m_configObjects: {}

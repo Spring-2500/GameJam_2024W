@@ -180,6 +180,7 @@ MonoBehaviour:
   xRotation: 0
   yRotation: 0
   zRotation: 0
+  testGeneretor: 0
 --- !u!114 &159071353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -261,6 +262,7 @@ MonoBehaviour:
   xRotation: 10
   yRotation: 0
   zRotation: 0
+  testGeneretor: 0
 --- !u!114 &178857091
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -343,6 +345,7 @@ MonoBehaviour:
   xRotation: 0
   yRotation: 0
   zRotation: 10
+  testGeneretor: 0
 --- !u!114 &181535189
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -505,6 +508,7 @@ MonoBehaviour:
   xRotation: 0
   yRotation: 0
   zRotation: 0
+  testGeneretor: 0
 --- !u!114 &366288989
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -729,6 +733,7 @@ MonoBehaviour:
   xRotation: 0
   yRotation: 10
   zRotation: 0
+  testGeneretor: 0
 --- !u!114 &737972641
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -905,6 +910,7 @@ MonoBehaviour:
   xRotation: 10
   yRotation: 0
   zRotation: 0
+  testGeneretor: 0
 --- !u!114 &776507695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1147,6 +1153,7 @@ MonoBehaviour:
   xRotation: 0
   yRotation: 0
   zRotation: 0
+  testGeneretor: 0
 --- !u!114 &988257585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1331,6 +1338,7 @@ MonoBehaviour:
   xRotation: 0
   yRotation: 10
   zRotation: 0
+  testGeneretor: 0
 --- !u!114 &1590713639
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1384,7 +1392,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: ab3b98ddea559c74f95e4b2a1a87f517, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.05
+  m_Volume: 0.01
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1541,6 +1549,7 @@ MonoBehaviour:
   xRotation: 0
   yRotation: 0
   zRotation: 10
+  testGeneretor: 0
 --- !u!114 &1901224400
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1663,6 +1672,103 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2042165705
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2042165709}
+  - component: {fileID: 2042165708}
+  - component: {fileID: 2042165707}
+  - component: {fileID: 2042165706}
+  m_Layer: 0
+  m_Name: main_goal
+  m_TagString: Goal
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &2042165706
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2042165705}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &2042165707
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2042165705}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &2042165708
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2042165705}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &2042165709
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2042165705}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 200}
+  m_LocalScale: {x: 100, y: 100, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2064341247
 GameObject:
   m_ObjectHideFlags: 0
@@ -1706,6 +1812,7 @@ MonoBehaviour:
   xRotation: 10
   yRotation: 0
   zRotation: 0
+  testGeneretor: 0
 --- !u!4 &2064341249
 Transform:
   m_ObjectHideFlags: 0
@@ -1786,6 +1893,7 @@ MonoBehaviour:
   leftSpeed: -0.13
   jumpPower: 6.5
   moveStopTime: 1
+  goalSceneName: 
   generete:
   - {fileID: 2064341248}
   - {fileID: 737972640}
@@ -1939,7 +2047,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.2
+  m_Volume: 0.05
   m_Pitch: 1
   Loop: 0
   Mute: 0
