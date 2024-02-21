@@ -96,6 +96,6 @@ public class PCon : MonoBehaviour
     private void Goal()
     {
         Debug.Log("Goal");
-        SceneManager.LoadScene(goalSceneName);
+        //SceneManager.LoadScene(goalSceneName);
     }
 }

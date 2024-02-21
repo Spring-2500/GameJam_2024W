@@ -105,6 +105,10 @@ public class main_Generator : MonoBehaviour
     [SerializeField] float yAngle;
     [SerializeField] float zAngle;
     [SerializeField] float speed;
+    [SerializeField] float minyAngle;
+    [SerializeField] float maxyAngle;
+    [SerializeField] int minSpeed;
+    [SerializeField] int maxSpeed;
     [SerializeField] bool randomAngle;
     [SerializeField] bool randomSpeed;
 
@@ -116,7 +120,6 @@ public class main_Generator : MonoBehaviour
     Rigidbody rb;
 
     private int obj;
-    private float tmpInterval;
     private bool createObj = true;
     IEnumerator enumerator = null;
 
@@ -126,7 +129,6 @@ public class main_Generator : MonoBehaviour
         enumerator = GenerateObject();
         StartCoroutine(enumerator);
 
-        tmpInterval = interval;
     }
 
     IEnumerator GenerateObject()
@@ -139,7 +141,7 @@ public class main_Generator : MonoBehaviour
 
                 obj = Random.Range(0, objects.Length);
 
-                if (randomAngle) yAngle = Random.Range(-8.0f, 8.0f);
+                if (randomAngle) yAngle = Random.Range(minyAngle, maxyAngle);
 
                 Quaternion angle = Quaternion.Euler(xAngle, yAngle, zAngle);
 
@@ -158,7 +160,7 @@ public class main_Generator : MonoBehaviour
     private void Force(GameObject o)
     {
 
-        if (randomSpeed) speed = Random.Range(-23, -25);
+        if (randomSpeed) speed = Random.Range(minSpeed, maxSpeed);
 
         o.GetComponent<Rigidbody>().AddForce(o.transform.forward * speed, ForceMode.Impulse);
 

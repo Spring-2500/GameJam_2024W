@@ -171,12 +171,15 @@ MonoBehaviour:
   objects:
   - {fileID: 4684121252504223820, guid: 34e936d5b0b50b24cb1ccf2a3a31ae04, type: 3}
   interval: 3.5
-  xAngle: 0
   yAngle: 0
   zAngle: 0
   speed: -35
   randomAngle: 1
   randomSpeed: 0
+  minyAngle: 0
+  maxyAngle: 0
+  minSpeed: 0
+  maxSpeed: 0
   xRotation: 0
   yRotation: 0
   zRotation: 0
@@ -200,7 +203,11 @@ MonoBehaviour:
   yAngle: 0
   zAngle: 0
   speed: -35
-  randomAngle: 1
+  minyAngle: 0
+  maxyAngle: 0
+  minSpeed: 0
+  maxSpeed: 0
+  randomAngle: 0
   randomSpeed: 0
   xRotation: 0
   yRotation: 0
@@ -253,12 +260,15 @@ MonoBehaviour:
   objects:
   - {fileID: 2788452724841496174, guid: d999bd44b2fe27f4e88d89bd40c342a6, type: 3}
   interval: 5
-  xAngle: 0
   yAngle: 0
   zAngle: 90
   speed: -30
   randomAngle: 0
   randomSpeed: 0
+  minyAngle: 0
+  maxyAngle: 0
+  minSpeed: 0
+  maxSpeed: 0
   xRotation: 10
   yRotation: 0
   zRotation: 0
@@ -282,6 +292,10 @@ MonoBehaviour:
   yAngle: 0
   zAngle: 90
   speed: -30
+  minyAngle: 0
+  maxyAngle: 0
+  minSpeed: 0
+  maxSpeed: 0
   randomAngle: 0
   randomSpeed: 0
   xRotation: 10
@@ -336,12 +350,15 @@ MonoBehaviour:
   - {fileID: 4684121252504223820, guid: 34e936d5b0b50b24cb1ccf2a3a31ae04, type: 3}
   - {fileID: 8766986821656316650, guid: 8abc9d415278e1a41adda9dad27868f8, type: 3}
   interval: 4
-  xAngle: 0
   yAngle: 0
   zAngle: 0
   speed: -22
   randomAngle: 1
   randomSpeed: 0
+  minyAngle: 0
+  maxyAngle: 0
+  minSpeed: 0
+  maxSpeed: 0
   xRotation: 0
   yRotation: 0
   zRotation: 10
@@ -366,8 +383,12 @@ MonoBehaviour:
   yAngle: 0
   zAngle: 0
   speed: -22
+  minyAngle: -4
+  maxyAngle: 16
+  minSpeed: -20
+  maxSpeed: -24
   randomAngle: 1
-  randomSpeed: 0
+  randomSpeed: 1
   xRotation: 0
   yRotation: 0
   zRotation: 10
@@ -499,12 +520,15 @@ MonoBehaviour:
   objects:
   - {fileID: 4684121252504223820, guid: bcfbf2ecb47ed7240b2ec3fc0653b686, type: 3}
   interval: 2.5
-  xAngle: 0
   yAngle: 0
   zAngle: 0
   speed: -20
   randomAngle: 1
   randomSpeed: 0
+  minyAngle: 0
+  maxyAngle: 0
+  minSpeed: 0
+  maxSpeed: 0
   xRotation: 0
   yRotation: 0
   zRotation: 0
@@ -528,7 +552,11 @@ MonoBehaviour:
   yAngle: 0
   zAngle: 0
   speed: -20
-  randomAngle: 1
+  minyAngle: 0
+  maxyAngle: 0
+  minSpeed: 0
+  maxSpeed: 0
+  randomAngle: 0
   randomSpeed: 0
   xRotation: 0
   yRotation: 0
@@ -724,12 +752,15 @@ MonoBehaviour:
   objects:
   - {fileID: 8766986821656316650, guid: 8abc9d415278e1a41adda9dad27868f8, type: 3}
   interval: 3
-  xAngle: 0
   yAngle: 0
   zAngle: 0
   speed: -22
   randomAngle: 1
   randomSpeed: 0
+  minyAngle: 0
+  maxyAngle: 0
+  minSpeed: 0
+  maxSpeed: 0
   xRotation: 0
   yRotation: 10
   zRotation: 0
@@ -753,8 +784,12 @@ MonoBehaviour:
   yAngle: 0
   zAngle: 0
   speed: -22
+  minyAngle: -16
+  maxyAngle: 4
+  minSpeed: -20
+  maxSpeed: -24
   randomAngle: 1
-  randomSpeed: 0
+  randomSpeed: 1
   xRotation: 0
   yRotation: 10
   zRotation: 0
@@ -901,12 +936,15 @@ MonoBehaviour:
   - {fileID: 4684121252504223820, guid: 34e936d5b0b50b24cb1ccf2a3a31ae04, type: 3}
   - {fileID: 8766986821656316650, guid: 8abc9d415278e1a41adda9dad27868f8, type: 3}
   interval: 1
-  xAngle: 0
   yAngle: 0
   zAngle: 0
   speed: -13
   randomAngle: 0
   randomSpeed: 0
+  minyAngle: 0
+  maxyAngle: 0
+  minSpeed: 0
+  maxSpeed: 0
   xRotation: 10
   yRotation: 0
   zRotation: 0
@@ -931,6 +969,10 @@ MonoBehaviour:
   yAngle: 0
   zAngle: 0
   speed: -13
+  minyAngle: 0
+  maxyAngle: 0
+  minSpeed: 0
+  maxSpeed: 0
   randomAngle: 0
   randomSpeed: 0
   xRotation: 10
@@ -1144,12 +1186,15 @@ MonoBehaviour:
   objects:
   - {fileID: 4684121252504223820, guid: bcfbf2ecb47ed7240b2ec3fc0653b686, type: 3}
   interval: 3
-  xAngle: 0
   yAngle: 0
   zAngle: 0
   speed: -20
   randomAngle: 1
   randomSpeed: 0
+  minyAngle: 0
+  maxyAngle: 0
+  minSpeed: 0
+  maxSpeed: 0
   xRotation: 0
   yRotation: 0
   zRotation: 0
@@ -1173,7 +1218,11 @@ MonoBehaviour:
   yAngle: 0
   zAngle: 0
   speed: -20
-  randomAngle: 1
+  minyAngle: 0
+  maxyAngle: 0
+  minSpeed: 0
+  maxSpeed: 0
+  randomAngle: 0
   randomSpeed: 0
   xRotation: 0
   yRotation: 0
@@ -1329,12 +1378,15 @@ MonoBehaviour:
   objects:
   - {fileID: 8766986821656316650, guid: 8abc9d415278e1a41adda9dad27868f8, type: 3}
   interval: 2
-  xAngle: 0
   yAngle: 0
   zAngle: 0
   speed: -13
   randomAngle: 0
   randomSpeed: 0
+  minyAngle: 0
+  maxyAngle: 0
+  minSpeed: 0
+  maxSpeed: 0
   xRotation: 0
   yRotation: 10
   zRotation: 0
@@ -1358,6 +1410,10 @@ MonoBehaviour:
   yAngle: 0
   zAngle: 0
   speed: -13
+  minyAngle: 0
+  maxyAngle: 0
+  minSpeed: 0
+  maxSpeed: 0
   randomAngle: 0
   randomSpeed: 0
   xRotation: 0
@@ -1540,12 +1596,15 @@ MonoBehaviour:
   - {fileID: 4684121252504223820, guid: 34e936d5b0b50b24cb1ccf2a3a31ae04, type: 3}
   - {fileID: 8766986821656316650, guid: 8abc9d415278e1a41adda9dad27868f8, type: 3}
   interval: 1.5
-  xAngle: 0
   yAngle: 0
   zAngle: 0
   speed: -13
   randomAngle: 0
   randomSpeed: 0
+  minyAngle: 0
+  maxyAngle: 0
+  minSpeed: 0
+  maxSpeed: 0
   xRotation: 0
   yRotation: 0
   zRotation: 10
@@ -1570,6 +1629,10 @@ MonoBehaviour:
   yAngle: 0
   zAngle: 0
   speed: -13
+  minyAngle: 0
+  maxyAngle: 0
+  minSpeed: 0
+  maxSpeed: 0
   randomAngle: 0
   randomSpeed: 0
   xRotation: 0
@@ -1803,12 +1866,15 @@ MonoBehaviour:
   - {fileID: 4684121252504223820, guid: 34e936d5b0b50b24cb1ccf2a3a31ae04, type: 3}
   - {fileID: 8766986821656316650, guid: 8abc9d415278e1a41adda9dad27868f8, type: 3}
   interval: 2
-  xAngle: 0
   yAngle: 0
   zAngle: 0
   speed: -22
   randomAngle: 0
   randomSpeed: 0
+  minyAngle: 0
+  maxyAngle: 0
+  minSpeed: 0
+  maxSpeed: 0
   xRotation: 10
   yRotation: 0
   zRotation: 0
@@ -1848,6 +1914,10 @@ MonoBehaviour:
   yAngle: 0
   zAngle: 0
   speed: -22
+  minyAngle: 0
+  maxyAngle: 0
+  minSpeed: 0
+  maxSpeed: 0
   randomAngle: 0
   randomSpeed: 0
   xRotation: 10
