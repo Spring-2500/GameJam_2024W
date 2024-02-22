@@ -23,4 +23,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/main/Scene/main_EndScene.unity
     guid: 3fa32527f154c8d45a40b30283ec8302
+  - enabled: 1
+    path: Assets/main/Scene/main_Title_taaka.unity
+    guid: 074d4daecb74aba4fabbf6928ec58451
+  - enabled: 1
+    path: Assets/main/Scene/main_start.unity
+    guid: e95406b6c23434f4cb455540c8ba9ce6
   m_configObjects: {}

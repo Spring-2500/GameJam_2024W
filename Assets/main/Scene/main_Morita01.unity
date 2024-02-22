@@ -1840,8 +1840,6 @@ MonoBehaviour:
   objects:
   - {fileID: 2788452724841496174, guid: d999bd44b2fe27f4e88d89bd40c342a6, type: 3}
   interval: 4
-  xAngle: 0
-  yAngle: 0
   zAngle: 90
   xRotation: 0
   yRotation: 0
@@ -2796,6 +2794,7 @@ MonoBehaviour:
   - {fileID: 1450289005}
   - {fileID: 883415886}
   rollingGenerate: []
+  A_SE: {fileID: 8300000, guid: 4c8ee612f84beab48ad62ea757408ec7, type: 3}
 --- !u!82 &2089365185
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2806,7 +2805,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 4c8ee612f84beab48ad62ea757408ec7, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 0.05
   m_Pitch: 1
