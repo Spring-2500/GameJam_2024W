@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: a480fae913e109b45ab22a02e200546a, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -1840,6 +1840,8 @@ MonoBehaviour:
   objects:
   - {fileID: 2788452724841496174, guid: d999bd44b2fe27f4e88d89bd40c342a6, type: 3}
   interval: 4
+  xAngle: 0
+  yAngle: 0
   zAngle: 90
   xRotation: 0
   yRotation: 0
