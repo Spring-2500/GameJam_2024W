@@ -20,6 +20,7 @@ public class RollingGenerator : MonoBehaviour
 
     private int obj;
     private bool createObj = true;
+    private bool stopGenerete = false;
     IEnumerator enumerator = null;
 
     [Header("オブジェクト生成をしない（テスト用）")]
@@ -43,13 +44,20 @@ public class RollingGenerator : MonoBehaviour
 
         while (true)
         {
-            if (createObj)
+            if (stopGenerete)
+            {
+                //ゴール前のオブジェクトの生成をやめる
+                yield break;
+
+            }
+
+            else if (createObj)
             {
                 yield return new WaitForSeconds(interval);
 
 
                 GameObject o = Instantiate(objects[obj], new Vector3(playerStartPosX, transform.position.y, transform.position.z), Quaternion.Euler(xAngle, yAngle, zAngle));
-           
+
                 Rolling(o);
             }
 
@@ -80,9 +88,9 @@ public class RollingGenerator : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Goal"))
+        if (other.CompareTag("PreGoal"))
         {
-            StopCoroutine(enumerator);
+            stopGenerete = true;
         }
     }
 
