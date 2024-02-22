@@ -7,7 +7,6 @@ public class main_resultScript : MonoBehaviour
 {
     public Text Scoretext;
     float score;
-    public Text Nokori;
     public Text Tikoku;
     public Text Clear;
 
@@ -18,14 +17,12 @@ public class main_resultScript : MonoBehaviour
         Scoretext.text = score.ToString("F1");
         if(score >= 0)
         {
-            Nokori.enabled = false;
             Scoretext.enabled = true;
             Tikoku.enabled = false;
             Clear.enabled = true;
         }
         if (score < 0)
         {
-            Nokori.enabled = true;
             Scoretext.enabled = true;
             Tikoku.enabled = true;
             Clear.enabled = false;
