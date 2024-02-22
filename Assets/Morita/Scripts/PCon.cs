@@ -25,11 +25,11 @@ public class PCon : MonoBehaviour
 
 
     //入力されるキーを取得する変数
-   /* Dictionary<string, bool> move = new Dictionary<string, bool>
+    Dictionary<string, bool> move = new Dictionary<string, bool>
     {
         {"right", false },
         {"left", false },
-    };*/
+    };
 
     private void Start()
     {
@@ -48,15 +48,15 @@ public class PCon : MonoBehaviour
     private void Update()
     {
         //入力されたキーを取得
-        /* move["right"] = Input.GetKey(KeyCode.D);
-         move["left"] = Input.GetKey(KeyCode.A);*/
+         move["right"] = Input.GetKey(KeyCode.D);
+         move["left"] = Input.GetKey(KeyCode.A);
 
-        if (moveStart)
+       /* if (moveStart)
         {
             if (Input.GetKey(KeyCode.D)) transform.Translate(rightSpeed, 0, 0);
 
             if (Input.GetKey(KeyCode.A)) transform.Translate(leftSpeed, 0, 0);
-        }
+        }*/
         
         //スペースキーを取得しジャンプする。空中ジャンプはできない
         if (Input.GetKeyDown(KeyCode.Space) && isJumping) Jump();
@@ -67,8 +67,8 @@ public class PCon : MonoBehaviour
         //入力されたキーに応じてプレイヤーが移動
         if (moveStart)
         {
-           /* if (move["right"]) transform.Translate(rightSpeed, 0, 0); //速度rightSpeedで右に移動
-            if (move["left"]) transform.Translate(leftSpeed, 0, 0); //速度leftSpeedで左に移動*/
+           if (move["right"]) transform.Translate(rightSpeed, 0, 0); //速度rightSpeedで右に移動
+            if (move["left"]) transform.Translate(leftSpeed, 0, 0); //速度leftSpeedで左に移動
 
             //プレイヤーが自動的に前に進む
             transform.position += Vector3.forward * speed;
