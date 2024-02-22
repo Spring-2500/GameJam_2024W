@@ -122,7 +122,7 @@ public class Generator : MonoBehaviour
         //ゴール前のオブジェクトの生成をやめる
         if(other.CompareTag("PreGoal"))
         {
-            stopGenerete = true;
+           stopGenerete = true;
         }
     }
 
