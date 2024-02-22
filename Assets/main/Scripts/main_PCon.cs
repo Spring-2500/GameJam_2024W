@@ -112,7 +112,7 @@ using UnityEngine.SceneManagement;
 }*/
 
 
-
+/*
 public class main_PCon : MonoBehaviour
 {
     [SerializeField] float speed = 0.4f; //プレイヤーの目に進む速度
@@ -251,9 +251,10 @@ public class main_PCon : MonoBehaviour
     }
 
 }
+*/
 
 
-/*public class main_PCon : MonoBehaviour
+public class main_PCon : MonoBehaviour
 {
     [SerializeField] float speed = 0.4f; //プレイヤーの目に進む速度
     [SerializeField] float rightSpeed = 0.13f; //右に移動する速度
@@ -269,7 +270,7 @@ public class main_PCon : MonoBehaviour
     private int hitCount = 0;
     private bool moveStart = false; //スタート時プレイヤーを動かなくする変数
 
-    public Generator[] generete; //オブジェクトを生成するGeneratorｗ格納する配列
+    public main_Generator[] generete; //オブジェクトを生成するGeneratorｗ格納する配列
 
     //入力されるキーを取得する変数
     Dictionary<string, bool> move = new Dictionary<string, bool>
@@ -388,4 +389,5 @@ public class main_PCon : MonoBehaviour
         speedEffect.SetActive(true); //カウントダウン終了後SpeedEffectを表示
     }
 
-}*/
+}
+
