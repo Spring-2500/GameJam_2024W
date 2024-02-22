@@ -20,6 +20,14 @@ public class main_TimerController : MonoBehaviour
         time = time_minutu;
     }
 
+    IEnumerator TimerCoroutine()
+    {
+        yield return new WaitForSeconds(start_time_minutu);
+
+        time -= Time.deltaTime;
+        Timetext.text = time.ToString("F1");
+    }
+
     // Update is called once per frame
     void Update()
     {
