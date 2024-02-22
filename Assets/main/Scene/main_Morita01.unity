@@ -1090,6 +1090,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2588628947829701013, guid: fde70bfbad878524894096d00792458c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2588628947898873424, guid: fde70bfbad878524894096d00792458c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -103
@@ -1977,7 +1981,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objects:
-  - {fileID: 227880958590413088, guid: b52a40146622d894d93a3a5101f13a24, type: 3}
+  - {fileID: 4887570696269754444, guid: 8d6b469ffca94a84986026328013026e, type: 3}
   interval: 3
   yAngle: 0
   zAngle: 0
