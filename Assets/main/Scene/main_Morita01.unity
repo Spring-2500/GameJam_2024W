@@ -401,6 +401,8 @@ MonoBehaviour:
   time_minutu: 60
   Start_text: {fileID: 1553789759}
   start_time_minutu: 3
+  Ato: {fileID: 813507424}
+  Zyugyo: {fileID: 348455969}
 --- !u!114 &496849008
 MonoBehaviour:
   m_ObjectHideFlags: 0

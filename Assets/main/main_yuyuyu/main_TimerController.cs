@@ -15,6 +15,9 @@ public class main_TimerController : MonoBehaviour
 
     public static float send_time;
 
+    public Text Ato;
+    public Text Zyugyo;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -48,9 +51,13 @@ public class main_TimerController : MonoBehaviour
                 Timetext.text = time.ToString("F1");             
                 send_time = time; 
             }
+            else
+            {
+                send_time = 0f;
+                Timetext.text = "íxçè";
+                Ato.enabled = false;
+                Zyugyo.enabled = false;
+            }
         }
-
-        //time -= Time.deltaTime;
-        //Timetext.text = time.ToString("F1");
     }
 }
