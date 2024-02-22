@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6412368312515939698}
   - component: {fileID: 3523205908911162720}
   - component: {fileID: 68059050144061031}
+  - component: {fileID: 6453342793132936111}
   m_Layer: 0
   m_Name: maruta
   m_TagString: Obstacle
@@ -128,3 +129,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef8eef173b83c5b4985fe5d8991e0527, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6453342793132936111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5409067172644981999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55ce4d0429e7de443b68f3420a9c74e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minSpeed: 0.4
+  maxSpeed: 0.8
