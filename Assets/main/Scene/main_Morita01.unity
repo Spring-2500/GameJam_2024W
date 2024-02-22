@@ -192,6 +192,51 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 489417ef7311ba248bca25d5cd440277, type: 3}
+--- !u!1 &347171688
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 347171690}
+  - component: {fileID: 347171689}
+  m_Layer: 0
+  m_Name: WallLeft
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &347171689
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 347171688}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &347171690
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 347171688}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -15, y: 25, z: -30}
+  m_LocalScale: {x: 5, y: 50, z: 1000}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &348455967
 GameObject:
   m_ObjectHideFlags: 0
@@ -272,6 +317,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 348455967}
   m_CullTransparentMesh: 1
+--- !u!1 &370445149
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 370445151}
+  - component: {fileID: 370445150}
+  m_Layer: 0
+  m_Name: PreGoal
+  m_TagString: PreGoal
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &370445150
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 370445149}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &370445151
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 370445149}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 45, z: 180}
+  m_LocalScale: {x: 40, y: 100, z: 10}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &438274478 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 489417ef7311ba248bca25d5cd440277, type: 3}
@@ -698,6 +788,8 @@ MonoBehaviour:
   minSpeed: 0
   maxSpeed: 0
   startTime: 3
+  wallPosLeft: 0
+  wallPosRight: 0
   xRotation: 0
   yRotation: 0
   zRotation: 0
@@ -805,10 +897,57 @@ MonoBehaviour:
   minSpeed: -9
   maxSpeed: -14
   startTime: 3
+  wallPosLeft: 0
+  wallPosRight: 0
   xRotation: 0
   yRotation: 0
   zRotation: 10
   testGeneretor: 0
+--- !u!1 &907576750
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 907576752}
+  - component: {fileID: 907576751}
+  m_Layer: 0
+  m_Name: WallLeft (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &907576751
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 907576750}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &907576752
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 907576750}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 15, y: 25, z: -30}
+  m_LocalScale: {x: 5, y: 50, z: 1000}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &933087290
 GameObject:
   m_ObjectHideFlags: 0
@@ -1163,6 +1302,8 @@ MonoBehaviour:
   minSpeed: -20
   maxSpeed: -24
   startTime: 3
+  wallPosLeft: 0
+  wallPosRight: 0
   xRotation: 0
   yRotation: 0
   zRotation: 10
@@ -1268,6 +1409,8 @@ MonoBehaviour:
   minSpeed: -9
   maxSpeed: -14
   startTime: 3
+  wallPosLeft: 0
+  wallPosRight: 0
   xRotation: 0
   yRotation: 10
   zRotation: 0
@@ -1375,6 +1518,8 @@ MonoBehaviour:
   minSpeed: -9
   maxSpeed: -14
   startTime: 3
+  wallPosLeft: 0
+  wallPosRight: 0
   xRotation: 10
   yRotation: 0
   zRotation: 0
@@ -1542,6 +1687,8 @@ MonoBehaviour:
   minSpeed: -20
   maxSpeed: -24
   startTime: 3
+  wallPosLeft: 0
+  wallPosRight: 0
   xRotation: 10
   yRotation: 0
   zRotation: 0
@@ -1720,6 +1867,8 @@ MonoBehaviour:
   minSpeed: 0
   maxSpeed: 0
   startTime: 3
+  wallPosLeft: 0
+  wallPosRight: 0
   xRotation: 10
   yRotation: 0
   zRotation: 0
@@ -1846,6 +1995,8 @@ MonoBehaviour:
   minSpeed: 0
   maxSpeed: 0
   startTime: 3
+  wallPosLeft: 0
+  wallPosRight: 0
   xRotation: 0
   yRotation: 0
   zRotation: 0
@@ -1976,6 +2127,8 @@ MonoBehaviour:
   minSpeed: 0
   maxSpeed: 0
   startTime: 3
+  wallPosLeft: 0
+  wallPosRight: 0
   xRotation: 0
   yRotation: 0
   zRotation: 0
@@ -2268,6 +2421,8 @@ MonoBehaviour:
   minSpeed: 0
   maxSpeed: 0
   startTime: 3
+  wallPosLeft: 0
+  wallPosRight: 0
   xRotation: 0
   yRotation: 10
   zRotation: 0
@@ -2507,6 +2662,7 @@ MonoBehaviour:
   jumpPower: 6.5
   moveStopTime: 1
   startTime: 3
+  speedEffect: {fileID: 0}
   goalSceneName: 
   generete:
   - {fileID: 0}
@@ -2629,8 +2785,8 @@ MonoBehaviour:
   jumpPower: 6.5
   moveStopTime: 1
   startTime: 3
-  goalSceneName: 
-  A_SE: {fileID: 0}
+  goalSceneName: main_EndScene
+  A_SE: {fileID: 8300000, guid: 4c8ee612f84beab48ad62ea757408ec7, type: 3}
   generete:
   - {fileID: 0}
   - {fileID: 0}
