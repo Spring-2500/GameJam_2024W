@@ -20,7 +20,9 @@ public class PCon : MonoBehaviour
     private int hitCount = 0;
     private bool moveStart = false; //スタート時プレイヤーを動かなくする変数
 
-    public Generator[] generete; //オブジェクトを生成するGeneratorｗ格納する配列
+    public Generator[] generete; //オブジェクトを生成するGeneratorを格納する配列
+    public RollingGenerator[] rollingGenerate;
+
 
     //入力されるキーを取得する変数
     Dictionary<string, bool> move = new Dictionary<string, bool>
@@ -104,6 +106,10 @@ public class PCon : MonoBehaviour
     IEnumerator Stop()
     {
        for(int i = 0;i < generete.Length; i++) generete[i].GenerateStop();
+       for (int i = 0; i < rollingGenerate.Length; i++) rollingGenerate[i].GenerateStop();
+        
+
+        
 
         speed = 0.0f;
 
@@ -114,6 +120,7 @@ public class PCon : MonoBehaviour
         yield return new WaitForSeconds(moveStopTime);
 
         for (int i = 0; i < generete.Length; i++) generete[i].GenerateStart();
+        for (int i = 0; i < rollingGenerate.Length; i++) rollingGenerate[i].GenerateStart();
 
         speed = 0.4f;
 
