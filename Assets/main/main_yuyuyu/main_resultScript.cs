@@ -15,13 +15,13 @@ public class main_resultScript : MonoBehaviour
     {
         score = main_TimerController.send_time;
         Scoretext.text = score.ToString("F1");
-        if(score >= 0)
+        if(score > 0)
         {
             Scoretext.enabled = true;
             Tikoku.enabled = false;
             Clear.enabled = true;
         }
-        if (score < 0)
+        if (score == 0)
         {
             Scoretext.enabled = true;
             Tikoku.enabled = true;

@@ -426,6 +426,10 @@ public class main_PCon : MonoBehaviour
 
     private void Start()
     {
+        //フレームレート固定
+        QualitySettings.vSyncCount = 0;
+        Application.targetFrameRate = 60;
+
         rb = GetComponent<Rigidbody>(); //Rigidbodyを取得
         isJumping = true; //最初はジャンプできるようにする
 
@@ -440,8 +444,15 @@ public class main_PCon : MonoBehaviour
     private void Update()
     {
         //入力されたキーを取得
-        move["right"] = Input.GetKey(KeyCode.D);
-        move["left"] = Input.GetKey(KeyCode.A);
+        //move["right"] = Input.GetKey(KeyCode.D);
+        //move["left"] = Input.GetKey(KeyCode.A);
+        if (moveStart)
+        {
+            if (Input.GetKey(KeyCode.D)) transform.Translate(rightSpeed, 0, 0);
+
+            if (Input.GetKey(KeyCode.A)) transform.Translate(leftSpeed, 0, 0);
+        }
+
 
         //スペースキーを取得しジャンプする。空中ジャンプはできない
         if (Input.GetKeyDown(KeyCode.Space) && isJumping) Jump();
