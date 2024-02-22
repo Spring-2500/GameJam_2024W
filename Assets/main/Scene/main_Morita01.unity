@@ -513,6 +513,11 @@ Transform:
   m_Father: {fileID: 2089365183}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 8.456, y: 0, z: 0}
+--- !u!1 &762668659 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 550216981438169009, guid: 5e0b967ca2d9e4d47a18680af0fecf45, type: 3}
+  m_PrefabInstance: {fileID: 1510413947}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &767387223
 GameObject:
   m_ObjectHideFlags: 0
@@ -759,6 +764,8 @@ MonoBehaviour:
   minSpeed: 0
   maxSpeed: 0
   startTime: 3
+  wallPosLeft: 0
+  wallPosRight: 0
   xRotation: 0
   yRotation: 0
   zRotation: 0
@@ -867,6 +874,8 @@ MonoBehaviour:
   minSpeed: -9
   maxSpeed: -14
   startTime: 3
+  wallPosLeft: 0
+  wallPosRight: 0
   xRotation: 0
   yRotation: 0
   zRotation: 10
@@ -1273,6 +1282,8 @@ MonoBehaviour:
   minSpeed: -20
   maxSpeed: -24
   startTime: 3
+  wallPosLeft: 0
+  wallPosRight: 0
   xRotation: 0
   yRotation: 0
   zRotation: 10
@@ -1380,6 +1391,8 @@ MonoBehaviour:
   minSpeed: -9
   maxSpeed: -14
   startTime: 3
+  wallPosLeft: 0
+  wallPosRight: 0
   xRotation: 0
   yRotation: 10
   zRotation: 0
@@ -1488,6 +1501,8 @@ MonoBehaviour:
   minSpeed: -9
   maxSpeed: -14
   startTime: 3
+  wallPosLeft: 0
+  wallPosRight: 0
   xRotation: 10
   yRotation: 0
   zRotation: 0
@@ -1658,6 +1673,8 @@ MonoBehaviour:
   minSpeed: -20
   maxSpeed: -24
   startTime: 3
+  wallPosLeft: 0
+  wallPosRight: 0
   xRotation: 10
   yRotation: 0
   zRotation: 0
@@ -1966,6 +1983,8 @@ MonoBehaviour:
   minSpeed: 0
   maxSpeed: 0
   startTime: 3
+  wallPosLeft: 0
+  wallPosRight: 0
   xRotation: 0
   yRotation: 0
   zRotation: 0
@@ -2098,6 +2117,8 @@ MonoBehaviour:
   minSpeed: 0
   maxSpeed: 0
   startTime: 3
+  wallPosLeft: 0
+  wallPosRight: 0
   xRotation: 0
   yRotation: 0
   zRotation: 0
@@ -2186,7 +2207,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1804382419}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d74333cf036c67d45b55ecae3026f21d, type: 3}
   m_Name: 
@@ -2392,6 +2413,8 @@ MonoBehaviour:
   minSpeed: 0
   maxSpeed: 0
   startTime: 3
+  wallPosLeft: 0
+  wallPosRight: 0
   xRotation: 0
   yRotation: 10
   zRotation: 0
@@ -2563,7 +2586,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2042165705}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -2634,7 +2657,6 @@ GameObject:
   - component: {fileID: 2089365181}
   - component: {fileID: 2089365186}
   - component: {fileID: 2089365179}
-  - component: {fileID: 2089365178}
   - component: {fileID: 2089365184}
   - component: {fileID: 2089365185}
   m_Layer: 0
@@ -2644,34 +2666,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2089365178
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2089365177}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2e979b8e2ed0c44e8be160c479d8d2a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0.4
-  rightSpeed: 0.13
-  leftSpeed: -0.13
-  jumpPower: 6.5
-  moveStopTime: 1
-  startTime: 3
-  speedEffect: {fileID: 0}
-  goalSceneName: 
-  generete:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!54 &2089365179
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2785,16 +2779,18 @@ MonoBehaviour:
   jumpPower: 6.5
   moveStopTime: 1
   startTime: 3
+  speedEffect: {fileID: 762668659}
   goalSceneName: main_EndScene
-  A_SE: {fileID: 8300000, guid: 4c8ee612f84beab48ad62ea757408ec7, type: 3}
   generete:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1903668522}
+  - {fileID: 1514597991}
+  - {fileID: 1143133329}
+  - {fileID: 819575488}
+  - {fileID: 1799883340}
+  - {fileID: 1631582377}
+  - {fileID: 1484099426}
+  - {fileID: 1450289005}
+  - {fileID: 883415886}
 --- !u!82 &2089365185
 AudioSource:
   m_ObjectHideFlags: 0

@@ -181,6 +181,7 @@ public class main_Generator : MonoBehaviour
 }*/
 
 
+/*
 public class main_Generator : MonoBehaviour
 {
     [SerializeField] GameObject[] objects;
@@ -282,10 +283,10 @@ public class main_Generator : MonoBehaviour
         }
     }
 
-}
+}*/
 
 
-/*
+
 public class main_Generator : MonoBehaviour
 {
     [SerializeField] GameObject[] objects;
@@ -414,4 +415,4 @@ public class main_Generator : MonoBehaviour
     {
         Destroy(o);
     }
-}*/
+}
