@@ -228,8 +228,6 @@ MonoBehaviour:
   startTime: 3
   wallPosLeft: -16
   wallPosRight: 16
-  outsideMinYAngle: 0
-  outsideMaxYAngle: 0
   xRotation: 0
   yRotation: 0
   zRotation: 0
@@ -256,7 +254,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 178857089}
-  - component: {fileID: 178857090}
   - component: {fileID: 178857091}
   - component: {fileID: 178857092}
   m_Layer: 0
@@ -281,39 +278,6 @@ Transform:
   m_Father: {fileID: 2089365183}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &178857090
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 178857088}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18a6eaee607051b4da86c47cb40fb588, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objects:
-  - {fileID: 2788452724841496174, guid: d999bd44b2fe27f4e88d89bd40c342a6, type: 3}
-  interval: 4.5
-  yAngle: 0
-  zAngle: 90
-  speed: -30
-  randomAngle: 0
-  randomSpeed: 0
-  minyAngle: 0
-  maxyAngle: 0
-  minSpeed: 0
-  maxSpeed: 0
-  startTime: 3
-  wallPosLeft: 0
-  wallPosRight: 0
-  outsideMinYAngle: 0
-  outsideMaxYAngle: 0
-  xRotation: 10
-  yRotation: 0
-  zRotation: 0
-  testGeneretor: 0
 --- !u!65 &178857091
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -342,6 +306,8 @@ MonoBehaviour:
   objects:
   - {fileID: 2788452724841496174, guid: d999bd44b2fe27f4e88d89bd40c342a6, type: 3}
   interval: 4
+  xAngle: 0
+  yAngle: 0
   zAngle: 90
   xRotation: 0
   yRotation: 0
@@ -408,8 +374,6 @@ MonoBehaviour:
   startTime: 3
   wallPosLeft: -16
   wallPosRight: 16
-  outsideMinYAngle: 11
-  outsideMaxYAngle: 21
   xRotation: 0
   yRotation: 0
   zRotation: 10
@@ -532,8 +496,6 @@ MonoBehaviour:
   startTime: 3
   wallPosLeft: -16
   wallPosRight: 16
-  outsideMinYAngle: 11
-  outsideMaxYAngle: 21
   xRotation: 0
   yRotation: 0
   zRotation: 0
@@ -740,8 +702,6 @@ MonoBehaviour:
   startTime: 3
   wallPosLeft: -16
   wallPosRight: 16
-  outsideMinYAngle: -21
-  outsideMaxYAngle: -11
   xRotation: 10
   yRotation: 0
   zRotation: 0
@@ -914,8 +874,6 @@ MonoBehaviour:
   startTime: 3
   wallPosLeft: -16
   wallPosRight: 16
-  outsideMinYAngle: 0
-  outsideMaxYAngle: 0
   xRotation: 10
   yRotation: 0
   zRotation: 0
@@ -993,8 +951,6 @@ MonoBehaviour:
   startTime: 3
   wallPosLeft: -16
   wallPosRight: 16
-  outsideMinYAngle: -21
-  outsideMaxYAngle: -11
   xRotation: 0
   yRotation: 0
   zRotation: 0
@@ -1117,8 +1073,6 @@ MonoBehaviour:
   startTime: 3
   wallPosLeft: -16
   wallPosRight: 16
-  outsideMinYAngle: -21
-  outsideMaxYAngle: -11
   xRotation: 0
   yRotation: 10
   zRotation: 0
@@ -1202,8 +1156,6 @@ MonoBehaviour:
   startTime: 3
   wallPosLeft: -16
   wallPosRight: 16
-  outsideMinYAngle: 11
-  outsideMaxYAngle: 21
   xRotation: 0
   yRotation: 0
   zRotation: 10
@@ -1363,8 +1315,6 @@ MonoBehaviour:
   startTime: 3
   wallPosLeft: -16
   wallPosRight: 16
-  outsideMinYAngle: 0
-  outsideMaxYAngle: 0
   xRotation: 0
   yRotation: 30
   zRotation: 0
@@ -1448,6 +1398,8 @@ MonoBehaviour:
   - {fileID: 776507694}
   - {fileID: 1590713638}
   - {fileID: 1901224399}
+  rollingGenerate:
+  - {fileID: 178857092}
 --- !u!54 &2089365179
 Rigidbody:
   m_ObjectHideFlags: 0

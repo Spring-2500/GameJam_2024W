@@ -8,6 +8,8 @@ public class RollingGenerator : MonoBehaviour
 
     [Header("オブジェクト生成に関すること")]
     [SerializeField] float interval = 1.0f;
+    [SerializeField] float xAngle;
+    [SerializeField] float yAngle;
     [SerializeField] float zAngle;
 
     [Header("オブジェクトの回転")]
@@ -46,8 +48,8 @@ public class RollingGenerator : MonoBehaviour
                 yield return new WaitForSeconds(interval);
 
 
-                GameObject o = Instantiate(objects[obj], new Vector3(playerStartPosX, transform.position.y, transform.position.z), Quaternion.Euler(0, 0, zAngle));
-
+                GameObject o = Instantiate(objects[obj], new Vector3(playerStartPosX, transform.position.y, transform.position.z), Quaternion.Euler(xAngle, yAngle, zAngle));
+           
                 Rolling(o);
             }
 
