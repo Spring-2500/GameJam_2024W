@@ -40,9 +40,11 @@ public class main_TimerController : MonoBehaviour
         if (start_time < 0)
         {
             Destroy(Start_text);
+            time -= Time.deltaTime;
+            Timetext.text = time.ToString("F1");
         }
 
-        time -= Time.deltaTime;
-        Timetext.text = time.ToString("F1");
+        //time -= Time.deltaTime;
+        //Timetext.text = time.ToString("F1");
     }
 }

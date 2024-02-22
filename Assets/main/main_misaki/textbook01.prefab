@@ -178,7 +178,7 @@ GameObject:
   - component: {fileID: 9085457182658041763}
   - component: {fileID: 6064168140744168379}
   - component: {fileID: 4411155276841832874}
-  - component: {fileID: 4794447890318433376}
+  - component: {fileID: 5207924389786086280}
   m_Layer: 0
   m_Name: textbook01
   m_TagString: Obstacle
@@ -232,7 +232,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.2, y: 3, z: 2.2}
   m_Center: {x: -0.1, y: 0, z: 0}
---- !u!114 &4794447890318433376
+--- !u!114 &5207924389786086280
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -241,6 +241,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8457152650644475161}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef8eef173b83c5b4985fe5d8991e0527, type: 3}
+  m_Script: {fileID: 11500000, guid: bd5409c4b1ba64b4380ee54ba1a543fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyTime: 3

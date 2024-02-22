@@ -205,8 +205,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8077678241553282129}
-  - component: {fileID: 2164360144363573419}
   - component: {fileID: 3888343994772953640}
+  - component: {fileID: 7505795980920534552}
   m_Layer: 0
   m_Name: hyousikiok_ok
   m_TagString: Obstacle
@@ -231,18 +231,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2164360144363573419
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8886302714344976107}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef8eef173b83c5b4985fe5d8991e0527, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!54 &3888343994772953640
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -259,3 +247,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &7505795980920534552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8886302714344976107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd5409c4b1ba64b4380ee54ba1a543fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTime: 3

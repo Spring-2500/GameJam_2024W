@@ -520,7 +520,7 @@ public class main_PCon : MonoBehaviour
     private void Goal()
     {
         Debug.Log("Goal");
-        //SceneManager.LoadScene(goalSceneName);
+        SceneManager.LoadScene("main_EndScene");
     }
 
     //最初のカウントダウン

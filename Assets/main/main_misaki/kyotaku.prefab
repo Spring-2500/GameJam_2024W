@@ -510,7 +510,7 @@ GameObject:
   - component: {fileID: 7550387109772593743}
   - component: {fileID: 6608377841230142195}
   - component: {fileID: 4513942729567589498}
-  - component: {fileID: 4135659787486797940}
+  - component: {fileID: 1550123422195581527}
   m_Layer: 0
   m_Name: kyotaku
   m_TagString: Obstacle
@@ -613,7 +613,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &4135659787486797940
+--- !u!114 &1550123422195581527
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -622,9 +622,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5040141923415030831}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef8eef173b83c5b4985fe5d8991e0527, type: 3}
+  m_Script: {fileID: 11500000, guid: bd5409c4b1ba64b4380ee54ba1a543fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyTime: 3
 --- !u!1 &6188283527454289167
 GameObject:
   m_ObjectHideFlags: 0
