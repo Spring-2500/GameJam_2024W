@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 2715775616835040946}
   - component: {fileID: 372285131927788567}
   - component: {fileID: 1927884923184847096}
-  - component: {fileID: 168287260116964772}
+  - component: {fileID: 2082765469613410598}
   m_Layer: 0
   m_Name: kanban
   m_TagString: Obstacle
@@ -149,7 +149,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &168287260116964772
+--- !u!114 &2082765469613410598
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -158,9 +158,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3385456931722161160}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef8eef173b83c5b4985fe5d8991e0527, type: 3}
+  m_Script: {fileID: 11500000, guid: bd5409c4b1ba64b4380ee54ba1a543fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyTime: 3
 --- !u!1 &6266332517275603132
 GameObject:
   m_ObjectHideFlags: 0

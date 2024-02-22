@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5725488958094481045}
   - component: {fileID: 1229083616756589046}
   - component: {fileID: 4777602992154847090}
-  - component: {fileID: 8592792731295334909}
+  - component: {fileID: 247778434557918468}
   m_Layer: 0
   m_Name: terebi
   m_TagString: Obstacle
@@ -115,7 +115,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &8592792731295334909
+--- !u!114 &247778434557918468
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -124,6 +124,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6086045003321915200}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef8eef173b83c5b4985fe5d8991e0527, type: 3}
+  m_Script: {fileID: 11500000, guid: bd5409c4b1ba64b4380ee54ba1a543fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyTime: 3

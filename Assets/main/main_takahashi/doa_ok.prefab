@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 5014779442344325981}
   - component: {fileID: 8230267571301154040}
   - component: {fileID: 6184356575176722482}
-  - component: {fileID: 826930183003431673}
   - component: {fileID: 2124198985419738087}
   - component: {fileID: 6983310808785610826}
+  - component: {fileID: 7848454406179157422}
   m_Layer: 0
   m_Name: doa_ok
   m_TagString: Obstacle
@@ -86,18 +86,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &826930183003431673
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5680099032705083879}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef8eef173b83c5b4985fe5d8991e0527, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!54 &2124198985419738087
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -127,3 +115,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.027210759, y: 0.036658652, z: 0.024713077}
   m_Center: {x: 0, y: -0.008329327, z: 0.0000855904}
+--- !u!114 &7848454406179157422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5680099032705083879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd5409c4b1ba64b4380ee54ba1a543fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyTime: 3
