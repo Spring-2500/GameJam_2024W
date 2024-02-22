@@ -1840,6 +1840,8 @@ MonoBehaviour:
   objects:
   - {fileID: 2788452724841496174, guid: d999bd44b2fe27f4e88d89bd40c342a6, type: 3}
   interval: 4
+  xAngle: 0
+  yAngle: 0
   zAngle: 90
   xRotation: 0
   yRotation: 0
@@ -1905,7 +1907,9 @@ MonoBehaviour:
   objects:
   - {fileID: 5409067172644981999, guid: 51f78295b1b50c740804c2a546eb5700, type: 3}
   interval: 4
-  zAngle: 90
+  xAngle: 0
+  yAngle: 90
+  zAngle: 0
   xRotation: 0
   yRotation: 0
   zRotation: 0
