@@ -20,7 +20,6 @@ public class RollingGenerator : MonoBehaviour
 
     private int obj;
     private bool createObj = true;
-    private bool stopGenerete = false;
     IEnumerator enumerator = null;
 
     [Header("オブジェクト生成をしない（テスト用）")]
@@ -44,14 +43,8 @@ public class RollingGenerator : MonoBehaviour
 
         while (true)
         {
-            if (stopGenerete)
-            {
-                //ゴール前のオブジェクトの生成をやめる
-                yield break;
 
-            }
-
-            else if (createObj)
+            if (createObj)
             {
                 yield return new WaitForSeconds(interval);
 
@@ -90,7 +83,7 @@ public class RollingGenerator : MonoBehaviour
     {
         if (other.CompareTag("PreGoal"))
         {
-            stopGenerete = true;
+            Destroy(this.gameObject);
         }
     }
 

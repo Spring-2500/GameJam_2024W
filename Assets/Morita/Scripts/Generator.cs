@@ -30,7 +30,6 @@ public class Generator : MonoBehaviour
 
     private int obj;
     private bool createObj = true;
-    private bool stopGenerete = false;
     IEnumerator enumerator = null;
 
     [Header("オブジェクト生成をしない（テスト用）")]
@@ -54,13 +53,7 @@ public class Generator : MonoBehaviour
 
         while (true)
         {
-            if (stopGenerete)
-            {
-                //ゴール前のオブジェクトの生成をやめる
-                yield break;
-
-            }
-            else if (createObj)
+            if (createObj)
             {
                 yield return new WaitForSeconds(interval);
 
@@ -122,7 +115,7 @@ public class Generator : MonoBehaviour
         //ゴール前のオブジェクトの生成をやめる
         if(other.CompareTag("PreGoal"))
         {
-           stopGenerete = true;
+            Destroy(this.gameObject);
         }
     }
 
