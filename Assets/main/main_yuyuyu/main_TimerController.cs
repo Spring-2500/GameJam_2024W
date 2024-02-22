@@ -13,6 +13,8 @@ public class main_TimerController : MonoBehaviour
     float start_time;
     [SerializeField] float start_time_minutu = 3f;
 
+    public static float send_time;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -40,8 +42,12 @@ public class main_TimerController : MonoBehaviour
         if (start_time < 0)
         {
             Destroy(Start_text);
-            time -= Time.deltaTime;
-            Timetext.text = time.ToString("F1");
+            if (time > 0)
+            {
+                time -= Time.deltaTime;
+                Timetext.text = time.ToString("F1");             
+                send_time = time; 
+            }
         }
 
         //time -= Time.deltaTime;

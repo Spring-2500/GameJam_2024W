@@ -412,6 +412,10 @@ public class main_PCon : MonoBehaviour
     public main_Generator[] generete; //オブジェクトを生成するGeneratorを格納する配列
     public main_RollingGenerator[] rollingGenerate;
 
+    //追加（ゆゆゆ）
+    public AudioClip A_SE;
+    AudioSource aud;
+
 
     //入力されるキーを取得する変数
     Dictionary<string, bool> move = new Dictionary<string, bool>
@@ -429,6 +433,9 @@ public class main_PCon : MonoBehaviour
 
         //CountDownが開始する
         StartCoroutine(CountDown());
+
+        //追加（ゆゆゆ）
+        this.aud = GetComponent<AudioSource>();
     }
     private void Update()
     {
@@ -506,6 +513,9 @@ public class main_PCon : MonoBehaviour
 
         Debug.Log("止まった");
 
+        //追加（ゆゆゆ）
+        this.aud.PlayOneShot(this.A_SE);
+
         yield return new WaitForSeconds(moveStopTime);
 
         for (int i = 0; i < generete.Length; i++) generete[i].GenerateStart();
@@ -520,7 +530,7 @@ public class main_PCon : MonoBehaviour
     private void Goal()
     {
         Debug.Log("Goal");
-        SceneManager.LoadScene("main_EndScene");
+        SceneManager.LoadScene("main_Title_taaka");
     }
 
     //最初のカウントダウン

@@ -21,4 +21,9 @@ public class main_ButtonScript : MonoBehaviour
     {
         SceneManager.LoadScene("main_Morita01");
     }
+
+    public void OnClickB()
+    {
+        SceneManager.LoadScene("main_start");
+    }
 }
